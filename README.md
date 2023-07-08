@@ -31,3 +31,19 @@ Finally, the extracted data is saved to a text file named 'extracted_data.txt' u
 - Make sure your input files are in a compatible format, such as tab-separated values (TSV) or comma-separated values (CSV).
 - Verify that the column names in your data files match the column names used in the script ('e.g. any name such as Specie').
 - Optionally, adjust the encoding parameter (encoding='latin1') if your data has a different encoding.
+### An example with the column name 'Specie <br>
+### File1.txt with Specie list to extract<br>
+
+**`Specie`**<br>
+`Species_A`<br>
+`Species_C`<br>
+### File2.txt with Specie list with its data columns <br>
+**`Specie     Code`**<br>
+`Species_A  ABC123`<br>
+`Species_B  DEF456`<br>
+`Species_C  GHI789`<br>
+### Extracted data would look like this <br>
+**`Specie      Code`**<br>
+`Species_A   ABC123`<br>
+`Species_C   GHI789`<br>
+> In this example, the first file 'File1.txt' contains a list of species names to extract, with the column header 'Specie'. The second file 'File2.txt' contains species data with two columns: 'Specie' and 'Code'. After running this script, it will extract the matching species data and save it to a file.
